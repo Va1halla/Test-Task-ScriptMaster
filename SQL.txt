@@ -1,0 +1,15 @@
+1)Select * from employees
+Where Salary >= 1000
+
+2)Select Distinct City from employees
+
+3)Select Distinct City, Sum(Salary) from employees
+Group by City
+
+4)Select name from employees
+Where Salary > 500 AND City
+IN (
+Select City from employees
+Group by City
+Having Count(*) > 1
+   )
